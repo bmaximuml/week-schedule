@@ -1,0 +1,63 @@
+\documentclass[
+  12pt,
+  a4paper,
+  oneside,
+  onecolumn,
+  appendixprefix=true,
+  toc=chapterentrywithdots,
+  % toc=listof,
+  toc=bibliography
+]{scrreprt}
+% Remove ", toc=bibliography" from the line above to remove bibliography from ToC
+% Uncomment "toc=listof," to add the lists of tables and figures to the ToC, unnumbered
+
+\usepackage{preamble}
+
+% You may want to use \vspace{-1cm} at times to change vertical spacing in a slightly hacky but functional way
+
+% Comment the line below to add the date into the title
+\date{}
+\title{TITLE HERE \\ \vspace{0.5cm} SUBTITLE}
+\author{AUTHOR(s) HERE}
+
+\begin{document}
+
+% Set font back to computer modern
+\renewcommand{\sfdefault}{cmr}
+
+\maketitle
+
+% Comment or delete below two lines to remove table of contents
+\tableofcontents
+\newpage
+
+% Uncomment the line below to add a list of figures
+% \listoffigures
+
+% Uncomment the line below to add a list of tables
+% \listoftables
+
+% Uncomment the line below if you have either a list of figures or tables
+% \newpage
+
+\chapter{Chapter 1}
+\label{chapter_1}
+
+\chapter{Chapter 2}
+\label{chapter_2}
+
+% LaTeX will not properly compile with no citations. Remove the citation below once you have made citations of your own.
+\cite{rfc1149}
+
+\bibliographystyle{ieeetr}
+\bibliography{bibliography}
+
+% Use the appendix.tex file for appendices.
+% Be careful to check the Appendix line in the toc is correct
+% Uncomment the four lines below to include an appendix.
+% \appendix
+% \newpage
+% \addcontentsline{toc}{chapter}{Appendices}
+% \input{appendix}
+
+\end{document}
